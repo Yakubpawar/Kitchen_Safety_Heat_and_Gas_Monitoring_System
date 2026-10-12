@@ -33,16 +33,16 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 * Connecting wires
 * Power supply
 
-## 3. Block diagram
+## 4. Block diagram
 ![](B1.jpg)
-## 4. Software and Tools
+## 5. Software and Tools
 
 * Embedded C
 * Keil µVision IDE
 * Proteus Design Suite
 * LPC2148 microcontroller header and peripheral libraries
 
-## 5. Hardware Pin Connections
+## 6. Hardware Pin Connections
 
 | Component            | LPC2148 Pin   | Function                   |
 | -------------------- | ------------- | -------------------------- |
@@ -61,7 +61,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 
 **Note:** Verify these connections against the final source code and Proteus circuit before hardware implementation.
 
-## 6. Working Principle
+## 7. Working Principle
 
 1. The LM35 measures the temperature and produces an analog output.
 2. The MQ-2 sensor produces an analog signal corresponding to changes in gas concentration.
@@ -73,7 +73,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 8. The keypad and external interrupt provide access to password-protected settings.
 9. The user can configure temperature and gas thresholds through the editing interface.
 
-## 7. Main Features
+## 8. Main Features
 
 * Real-time temperature monitoring
 * Gas-level monitoring
@@ -87,7 +87,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 * External interrupt-based edit-mode request
 
 
-## 8. How to Run the Project
+## 9. How to Run the Project
 
 1. Clone or download this repository.
 2. Open the project in Keil µVision or the IDE configured for the LPC2148.
@@ -99,7 +99,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 8. Load the generated program into the microcontroller or simulate the circuit in Proteus.
 9. Power on the system and test the sensor readings and alert behavior.
 
-## 9. Expected Output
+## 10. Expected Output
 
 * The LCD displays a startup message when the system powers on.
 * Temperature and gas readings are monitored.
@@ -109,10 +109,14 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 * Password authentication controls access to the configuration menu.
 
 Actual output depends on sensor calibration, circuit wiring, and the final firmware implementation.
-## 10.Testing and Result
+
+## 11.Testing and Result
+
 ![](r1.jpeg)
+
 ![](r2.jpeg)
-## 10. Future Enhancements
+
+## 12. Future Enhancements
 
 * Add Wi-Fi or GSM-based mobile notifications.
 * Develop a mobile application for remote monitoring.
@@ -121,18 +125,18 @@ Actual output depends on sensor calibration, circuit wiring, and the final firmw
 * Store sensor readings for future analysis.
 * Add data logging and alert history.
 
-## 11. Project Domain
+## 13. Project Domain
 
 **Embedded Systems | Embedded C | ARM7 | LPC2148 | ADC | Sensors | RTC | GPIO | Interrupts | Safety Monitoring**
 
-## 12. Applications
+## 14. Applications
 
 * Kitchen safety monitoring
 * Gas leakage alert systems
 * Temperature monitoring
 * Embedded safety and alarm applications
 
-## 13. Author
+## 15. Author
 
 **ANGOTHU YAKUB PAWAR**
 
@@ -140,7 +144,7 @@ Actual output depends on sensor calibration, circuit wiring, and the final firmw
 * **Microcontroller:** LPC2148 ARM7
 * **Programming Language:** Embedded C
 
-## 14. Disclaimer
+## 16. Disclaimer
 
 This project is intended for educational and demonstration purposes. It must not be used as the sole protection against gas leaks, fire, or other kitchen hazards. Use certified gas detectors and appropriate safety equipment for real-world applications.
 
