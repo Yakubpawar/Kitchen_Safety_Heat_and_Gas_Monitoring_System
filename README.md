@@ -33,6 +33,8 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 * Connecting wires
 * Power supply
 
+## 3. Block diagram
+![](B1)
 ## 4. Software and Tools
 
 * Embedded C
