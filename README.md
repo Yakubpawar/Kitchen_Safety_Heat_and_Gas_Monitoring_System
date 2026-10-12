@@ -111,6 +111,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 Actual output depends on sensor calibration, circuit wiring, and the final firmware implementation.
 ## 10.Testing and Result
 ![](r1.jpeg)
+![](r2.jpeg)
 ## 10. Future Enhancements
 
 * Add Wi-Fi or GSM-based mobile notifications.
