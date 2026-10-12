@@ -1,95 +1,146 @@
 # Kitchen_Safety_Heat_and_Gas_Monitoring_System
 The Kitchen Safety Heat and Gas Monitoring System uses the LPC2148 microcontroller, LM35, and MQ2 sensors to monitor temperature and detect gas leakage. It displays readings and RTC time on an LCD, activates buzzer and LEDs during hazards, records safety events, and provides password-protected settings to modify thresholds and RTC values.
-Kitchen-Safety-Heat-and-Gas-Monitoring-System
-1. Project Overview
-The Kitchen Safety Heat and Gas Monitoring System is an embedded system developed using the LPC2148 ARM7 microcontroller. It monitors temperature and combustible gas levels using an LM35 temperature sensor and an MQ-2 gas sensor. The system is designed to detect hazardous conditions, provide alerts, display real-time information, and record safety events with RTC timestamps.
+# Kitchen Safety Heat and Gas Monitoring System
 
-2. Objectives
-Monitor kitchen temperature using the LM35 sensor.
-Detect combustible gases and smoke using the MQ-2 sensor.
-Display temperature, sensor status, time, and date on a 16×2 LCD.
-Provide buzzer and LED alerts during unsafe conditions.
-Record safety events with RTC timestamps.
-Provide password-protected access to system settings.
-3. Hardware Requirements
-LPC2148 ARM7 development board
-LM35 temperature sensor
-MQ-2 gas sensor module
-16×2 LCD
-Real-Time Clock (RTC)
-4×4 matrix keypad
-Switches
-LEDs
-Buzzer
-USB-UART converter or DB-9 cable
-4. Block Diagram
-BlockDiagram
+## 📌 Project Overview
 
-5. Software Requirements
-Embedded C
-Keil µVision
-Flash Magic
-6. Pin Configuration
-The following assignments are based on the current project configuration and must be verified against the final source code and hardware wiring.
+The **Kitchen Safety Heat and Gas Monitoring System** is an embedded systems project developed using the LPC2148 ARM7 microcontroller. It monitors kitchen temperature and gas levels using the LM35 temperature sensor and MQ-2 gas sensor.
 
-Component	LPC2148 Pin	Function
-LCD Data Bus	P0.8–P0.15	8-bit data
-LCD RS	P0.16	Register Select
-LCD RW	P0.17	Read/Write control
-LCD EN	P0.18	Enable control
-LM35 Output	P0.27 / AD0.0	Analog temperature input
-Switch 1	P0.30 / EINT3	External interrupt for edit mode
-Switch 2	P1.27	Alert silencing switch
-Keypad Rows	P1.16–P1.19	Row connections
-Keypad Columns	P1.20–P1.23	Column connections
-Pins Requiring Verification
-The MQ-2 analog input, buzzer, and LED connections must be documented after checking the source code and actual circuit diagram.
+When the measured values exceed predefined thresholds, the system provides safety alerts using an LED, buzzer, and LCD display.
 
-7. Working Principle
-The LPC2148 reads the temperature and gas sensor signals and processes the readings. The LCD displays the sensor information along with the time and date provided by the RTC.
+The system also includes a Real-Time Clock (RTC) for date and time display, a keypad for user interaction, password-protected settings, and an external interrupt for entering edit mode.
 
-When the temperature exceeds the configured threshold or a hazardous gas condition is detected, the system is designed to activate an alert using the buzzer and LED indicators.
+## 🎯 Objectives
 
-The project specification also includes safety event recording with timestamps and password-protected editing of settings.
+* Monitor kitchen temperature in real time.
+* Detect gas leakage or increased gas levels.
+* Display sensor readings, date, and time on a 16×2 LCD.
+* Generate alerts when configured safety thresholds are exceeded.
+* Allow users to configure temperature and gas thresholds.
+* Provide password-protected access to settings.
+* Improve kitchen safety through embedded monitoring and alert mechanisms.
 
-8. Project Features
-Temperature monitoring
-Gas leakage detection
-LCD-based real-time display
-RTC time and date display
-Buzzer and LED alerts
-Safety event recording
-Password-protected edit mode
-Configurable temperature threshold
-Only mark features as implemented after verifying them on the actual hardware.
+## 🛠️ Hardware Components
 
-9. Source Code
-This repository contains the Embedded C source files and supporting project files used to develop the system.
+* LPC2148 ARM7 microcontroller
+* LM35 temperature sensor
+* MQ-2 gas sensor
+* 16×2 LCD display
+* 4×4 matrix keypad
+* Real-Time Clock (RTC)
+* LED indicator
+* Buzzer
+* Switches
+* Connecting wires
+* Power supply
 
-10. Circuit Diagram and Documentation
-Refer to the circuit diagram and supporting sensor datasheets included in this repository for hardware connection details and sensor specifications.
+## 💻 Software and Tools
 
-11. Testing and Results
-Result
-Result Result
+* Embedded C
+* Keil µVision IDE
+* Proteus Design Suite
+* LPC2148 microcontroller header and peripheral libraries
 
-Test the project on the LPC2148 development board to verify:
+## 🔌 Hardware Pin Connections
 
-LM35 temperature readings
-MQ-2 sensor response
-LCD display operation
-RTC time and date
-Buzzer and LED alerts
-Switch and keypad operation
-Password validation and event recording, if implemented
-Add actual hardware photographs and test results after testing.
+| Component            | LPC2148 Pin   | Function                   |
+| -------------------- | ------------- | -------------------------- |
+| LCD Data Bus         | P0.8–P0.15    | 8-bit data                 |
+| LCD RS               | P0.16         | Register Select            |
+| LCD RW               | P0.17         | Read/Write control         |
+| LCD EN               | P0.18         | Enable control             |
+| LM35 Output          | P0.28 / AD0.1 | Analog temperature input   |
+| MQ-2 Output          | P0.29 / AD0.2 | Analog gas sensor input    |
+| Edit Mode Switch     | P0.1 / EINT0  | External interrupt request |
+| Alert Silence Switch | P0.24         | Alert silencing input      |
+| Keypad Rows          | P1.16–P1.19   | Row connections            |
+| Keypad Columns       | P1.20–P1.23   | Column connections         |
+| LED Indicator        | P0.23         | Safety alert indication    |
+| Buzzer               | P1.27         | Audible alert              |
 
-12. Applications
-Kitchen safety monitoring
-Gas leakage alert systems
-Temperature monitoring
-Embedded safety and alarm applications
-13. Author
-Burra Nagaraju
+**Note:** Verify these connections against the final source code and Proteus circuit before hardware implementation.
 
-Project: Kitchen Safety Heat and Gas Monitoring System Microcontroller: LPC2148 ARM7 Programming Language: Embedded C
+## ⚙️ Working Principle
+
+1. The LM35 measures the temperature and produces an analog output.
+2. The MQ-2 sensor produces an analog signal corresponding to changes in gas concentration.
+3. The LPC2148 ADC converts the analog sensor signals into digital values.
+4. The microcontroller compares the readings with the configured temperature and gas thresholds.
+5. The LCD displays system information, sensor readings, and RTC date and time.
+6. When a monitored value exceeds its configured threshold, the system activates the corresponding safety alert.
+7. The alert silence switch allows the user to silence an active alert according to the program logic.
+8. The keypad and external interrupt provide access to password-protected settings.
+9. The user can configure temperature and gas thresholds through the editing interface.
+
+## 🔔 Main Features
+
+* Real-time temperature monitoring
+* Gas-level monitoring
+* ADC-based sensor interfacing
+* 16×2 LCD status display
+* RTC-based date and time display
+* LED and buzzer safety alerts
+* Keypad-based user interaction
+* Password-protected settings
+* Configurable temperature and gas thresholds
+* External interrupt-based edit-mode request
+
+
+## 🚀 How to Run the Project
+
+1. Clone or download this repository.
+2. Open the project in Keil µVision or the IDE configured for the LPC2148.
+3. Add the required source files and header files to the project.
+4. Configure the microcontroller clock and peripheral settings.
+5. Verify the ADC channel selection for the LM35 and MQ-2 sensors.
+6. Check the LCD, keypad, RTC, LED, buzzer, and switch connections.
+7. Compile the program and resolve any errors.
+8. Load the generated program into the microcontroller or simulate the circuit in Proteus.
+9. Power on the system and test the sensor readings and alert behavior.
+
+## 📊 Expected Output
+
+* The LCD displays a startup message when the system powers on.
+* Temperature and gas readings are monitored.
+* The RTC provides date and time information.
+* The LCD displays system status and sensor readings.
+* The LED and buzzer provide alerts when configured thresholds are exceeded.
+* Password authentication controls access to the configuration menu.
+
+Actual output depends on sensor calibration, circuit wiring, and the final firmware implementation.
+
+## 🔮 Future Enhancements
+
+* Add Wi-Fi or GSM-based mobile notifications.
+* Develop a mobile application for remote monitoring.
+* Improve gas-sensor calibration and measurement reliability.
+* Add an automatic gas shutoff mechanism using a suitable relay and certified valve.
+* Store sensor readings for future analysis.
+* Add data logging and alert history.
+
+## 📚 Project Domain
+
+**Embedded Systems | Embedded C | ARM7 | LPC2148 | ADC | Sensors | RTC | GPIO | Interrupts | Safety Monitoring**
+
+## 📱 12. Applications
+
+* Kitchen safety monitoring
+* Gas leakage alert systems
+* Temperature monitoring
+* Embedded safety and alarm applications
+
+## 👨‍💻 13. Author
+
+**ANGOTHU YAKUB PAWAR**
+
+* **Project:** Kitchen Safety Heat and Gas Monitoring System
+* **Microcontroller:** LPC2148 ARM7
+* **Programming Language:** Embedded C
+
+## ⚠️ Disclaimer
+
+This project is intended for educational and demonstration purposes. It must not be used as the sole protection against gas leaks, fire, or other kitchen hazards. Use certified gas detectors and appropriate safety equipment for real-world applications.
+
+## 📄 License
+
+This project is shared for educational and learning purposes. Add an appropriate open-source license if you want to specify the terms under which others may use, modify, or distribute the code.
