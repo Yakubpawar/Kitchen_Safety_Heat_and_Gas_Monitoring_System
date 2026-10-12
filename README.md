@@ -119,6 +119,8 @@ Actual output depends on sensor calibration, circuit wiring, and the final firmw
 
 ![](r2.jpeg)
 
+![](Kitchen_Safety_Project_output.mp4)
+
 ## 13. Future Enhancements
 
 * Add Wi-Fi or GSM-based mobile notifications.
