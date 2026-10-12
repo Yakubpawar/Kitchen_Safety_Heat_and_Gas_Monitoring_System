@@ -100,7 +100,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 9. Power on the system and test the sensor readings and alert behavior.
 ## 10.project flow based on your code
 
-![](project_flowchart.png)
+![](project_flowchat.png)
 
 ## 10. Expected Output
 
