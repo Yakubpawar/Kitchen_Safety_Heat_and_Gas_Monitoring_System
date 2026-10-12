@@ -102,7 +102,7 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 
 ![](project_fc.png)
 
-## 10. Expected Output
+## 11. Expected Output
 
 * The LCD displays a startup message when the system powers on.
 * Temperature and gas readings are monitored.
@@ -113,13 +113,13 @@ The system also includes a Real-Time Clock (RTC) for date and time display, a ke
 
 Actual output depends on sensor calibration, circuit wiring, and the final firmware implementation.
 
-## 11.Testing and Result
+## 12.Testing and Result
 
 ![](r1.jpeg)
 
 ![](r2.jpeg)
 
-## 12. Future Enhancements
+## 13. Future Enhancements
 
 * Add Wi-Fi or GSM-based mobile notifications.
 * Develop a mobile application for remote monitoring.
@@ -128,18 +128,27 @@ Actual output depends on sensor calibration, circuit wiring, and the final firmw
 * Store sensor readings for future analysis.
 * Add data logging and alert history.
 
-## 13. Project Domain
+## 14. Project Domain
 
 **Embedded Systems | Embedded C | ARM7 | LPC2148 | ADC | Sensors | RTC | GPIO | Interrupts | Safety Monitoring**
 
-## 14. Applications
+## 15. Applications
 
 * Kitchen safety monitoring
 * Gas leakage alert systems
 * Temperature monitoring
 * Embedded safety and alarm applications
 
-## 15. Author
+
+## 16. Disclaimer
+
+This project is intended for educational and demonstration purposes. It must not be used as the sole protection against gas leaks, fire, or other kitchen hazards. Use certified gas detectors and appropriate safety equipment for real-world applications.
+
+## 17. License
+
+This project is shared for educational and learning purposes. Add an appropriate open-source license if you want to specify the terms under which others may use, modify, or distribute the code.
+
+## 18. Author
 
 **ANGOTHU YAKUB PAWAR**
 
@@ -147,10 +156,3 @@ Actual output depends on sensor calibration, circuit wiring, and the final firmw
 * **Microcontroller:** LPC2148 ARM7
 * **Programming Language:** Embedded C
 
-## 16. Disclaimer
-
-This project is intended for educational and demonstration purposes. It must not be used as the sole protection against gas leaks, fire, or other kitchen hazards. Use certified gas detectors and appropriate safety equipment for real-world applications.
-
-## 15. License
-
-This project is shared for educational and learning purposes. Add an appropriate open-source license if you want to specify the terms under which others may use, modify, or distribute the code.
